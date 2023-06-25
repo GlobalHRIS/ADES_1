@@ -15,7 +15,7 @@ import io
 #from pages import 
 from pandas.api.types import infer_dtype
 
-@st.cache_data#(allow_output_mutation=True)
+#@st.cache_data#(allow_output_mutation=True)
 def get_data_from_excel():
     data = pd.read_excel(
         r"C:\Users\46058007\OneDrive - MMU\Attachments\ADES\ADES\farmers_data.xlsx",
