@@ -15,7 +15,7 @@ import io
 #from pages import 
 from pandas.api.types import infer_dtype
 
-@st.cache_data
+#@st.cache_data
 def get_data_from_excel():
     data = pd.read_excel("farmers_data.xlsx",sheet_name="Farmer-Data",usecols="A:K", header=0)
     return data
