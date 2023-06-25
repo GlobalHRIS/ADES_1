@@ -18,7 +18,7 @@ import io
 @st.cache_data#(allow_output_mutation=True)
 def get_data_from_excel():
     data = pd.read_excel(
-        r"C:\Users\kavya\kavya\kavya work\ADES\famers_data1.xlsx",
+        r"C:\Users\46058007\OneDrive - MMU\Attachments\ADES\ADES\famers_data1.xlsx",
         sheet_name="Farmer's Data",
         encoding= 'ISO-8859-1',
         usecols="A:P",
