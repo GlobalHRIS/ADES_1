@@ -15,15 +15,18 @@ import io
 #from pages import 
 from pandas.api.types import infer_dtype
 
-#@st.cache_data
-def get_data_from_excel():
-    data = pd.read_excel("farmers_data.xlsx",sheet_name="Farmer-Data",usecols="A:K", header=0)
-    return data
-    
-df = get_data_from_excel() 
-print(df)
 
-st.write(df)
+
+uploadedFile = st.file_uploader(fileUploadLabel, type=['csv','xlsx'],accept_multiple_files=False,key="fileUploader")
+
+#@st.cache_data
+#def get_data_from_excel():
+    #data = pd.read_excel("farmers_data.xlsx",sheet_name="Farmer-Data",usecols="A:K", header=0)
+    #return data
+if uploadedFile is not None:
+    df= pd.read_excel("farmers_data.xlsx")
+    st.write(df)
+
 
 # --------SIDERBAR-----------
 st.sidebar.header("Farmer-Info")
