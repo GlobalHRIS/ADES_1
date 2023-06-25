@@ -15,7 +15,7 @@ import io
 
 
 
-@st.cache_data#(allow_output_mutation=True)
+#@st.cache_data#(allow_output_mutation=True)
 def get_data_from_excel():
     data = pd.read_excel(
         r"C:\Users\46058007\OneDrive - MMU\Attachments\ADES\ADES\famers_data1.xlsx",
